@@ -1,0 +1,78 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-shadow: 0px 5px 2px #00000029;
+  min-width: 300px; }
+
+h1 {
+  font-family: "Baloo Bhai", cursive;
+  font-size: 4em; }
+
+p {
+  font-size: 1.5em; }
+
+.container {
+  width: 90%;
+  min-width: 300px; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.background-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+nav {
+  background: #3a5772; }
+  nav .container {
+    justify-content: space-between; }
+    nav .container ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 28%;
+      font-size: 1.5em; }
+  nav .link-logos {
+    margin: 2em;
+    border: 1px slid white;
+    width: 16%;
+    justify-content: space-around; }
+    nav .link-logos img {
+      height: 60px;
+      width: 60px; }
+
+header {
+  background: linear-gradient(85deg, #0f6884 0%, #2e7990 45%, #5a8fa7 98%); }
+  header .header-content {
+    padding: 6em;
+    flex-direction: column; }
+    header .header-content .profile-img {
+      border: .2em solid white;
+      border-radius: 50%; }
+    header .header-content span {
+      font-size: 1.6em;
+      margin-top: -.8em; }
+    header .header-content .fa {
+      font-size: 48px;
+      margin-top: 1em;
+      margin-bottom: -1.2em; }
+
+.about-me {
+  background-image: url("../images/bg-image1.jpg");
+  background-attachment: fixed; }
+  .about-me .overlay {
+    background: #000000ad; }
+  .about-me .container {
+    flex-direction: column;
+    padding: 4em 0em; }
+
+/*# sourceMappingURL=main.css.map */
