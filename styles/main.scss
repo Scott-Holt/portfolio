@@ -1,8 +1,20 @@
 $paragraph-font:'Roboto', sans-serif;
 $header-font:'Baloo Bhai', cursive;
 
+$large-phone:400px;
+$desktop:900px;
 
+@mixin large-phone {
+    @media(min-width:#{$large-phone}){
+        @content;
+    }
+}
 
+@mixin desktop {
+    @media(min-width:#{$desktop}){
+        @content;
+    }
+}
 
 
 
@@ -24,8 +36,11 @@ $header-font:'Baloo Bhai', cursive;
 body{
     font-family: $paragraph-font;
     color:white;
-    min-width:300px;
-    font-size: 1.6em;
+
+
+    @include desktop(){
+        font-size: 1.6em;
+    }
 }
 
 h1{
@@ -34,9 +49,9 @@ h1{
 
 
 
+
 .container{
     width:90%;
-    min-width:300px;
 }
 
 .flex{
@@ -62,7 +77,8 @@ header{
     width: 100vw;
 
     .overlay{
-        background:#000000ad;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6152836134453781) 71%, rgba(0,0,0,0.5984768907563025) 100%);
         width: 100%;
         height:100%;
         flex-direction: column;
@@ -72,13 +88,36 @@ header{
             height:90%;
             justify-content: flex-start;
 
+            #hamburger-icon{
+                font-size: 2em;
+                position: absolute;
+                top: .2em;
+                right: .5em;
+
+                @include desktop(){
+                    display:none;
+                }
+            }
+
             .header-content{
                 flex-direction: column;
+                width: 100%;
                 height:100%;
                 justify-content: space-between;
 
                 .col1{
-                    margin-top: 10em;
+                    flex-direction: column;
+                    margin-top: 6em;
+                    text-align: center;
+                    
+                    @include large-phone(){
+                        margin-top: 16em;
+                    }
+
+                    @include desktop(){
+                        flex-direction: row;
+                        text-align: left;
+                    }
 
                     .profile-img{
                         border: .2em solid white;
@@ -102,28 +141,41 @@ header{
 
 //////////NAV/////////////////////
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    display:none;
 
-    ul{
-        list-style: none;
+    @include desktop(){
         display: flex;
-        width: 30%;
-        justify-content: space-around;
-    }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
-    .link-logos{
-        width: 13%;
-        justify-content: space-around;
 
-        img{
-            height:60px;
-            width:60px;
+        ul{
+            list-style: none;
+            display: flex;
+            width: 52%;
+            justify-content: space-around;
+            /* border: 1px solid white; */
         }
+
+        .link-logos{
+            width: 24%;
+            justify-content: space-around;
+
+            img{
+                height:60px;
+                width:60px;
+            }
+        }
+
     }
-    
+}
+
+
+.phone-nav{
+    @include desktop(){
+        display:none;
+    }
 }
 
 
