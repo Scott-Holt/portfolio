@@ -63,11 +63,9 @@ header {
           text-align: center; }
           @media (min-width: 900px) {
             header .overlay .container .header-content .col1 {
-              flex-direction: row;
-              text-align: left;
               margin-top: 3em; } }
           header .overlay .container .header-content .col1 .profile-img {
-            border: 0.2em solid #4495ce85;
+            border: .2em solid white;
             border-radius: 50%; }
           header .overlay .container .header-content .col1 .header-text {
             margin-left: 2em; }
@@ -89,7 +87,7 @@ nav {
       nav ul {
         list-style: none;
         display: flex;
-        width: 53%;
+        width: 44%;
         justify-content: space-around;
         font-size: 1rem; }
         nav ul li:hover {

@@ -119,13 +119,13 @@ header{
                     
 
                     @include desktop(){
-                        flex-direction: row;
-                        text-align: left;
+                        // flex-direction: row;
+                        // text-align: left;
                         margin-top: 3em;
                     }
 
                     .profile-img{
-                        border: .2em solid $main;;
+                        border: .2em solid white;
                         border-radius: 50%;
                     }
 
@@ -168,7 +168,7 @@ nav{
         ul{
             list-style: none;
             display: flex;
-            width: 53%;
+            width: 44%;
             justify-content: space-around;
             font-size: 1rem;
 
