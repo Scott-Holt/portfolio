@@ -3,18 +3,28 @@
   margin: 0px;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Roboto", sans-serif;
-  color: white; }
-  @media (min-width: 900px) {
-    body {
-      font-size: 1.6em; } }
+  color: white;
+  background-color: #f1f1f1; }
 
 h1 {
-  font-family: "Baloo Bhai", cursive; }
+  font-family: "Baloo Bhai", cursive;
+  color: #1e799d; }
 
 .container {
   width: 90%; }
+
+section .container {
+  margin: 3em 0em; }
+  @media (min-width: 900px) {
+    section .container {
+      width: 70%; } }
+  section .container h1 {
+    margin-bottom: 1em; }
 
 .flex {
   display: flex;
@@ -31,6 +41,9 @@ header {
   background-attachment: fixed;
   height: 100vh;
   width: 100vw; }
+  @media (min-width: 1300px) {
+    header {
+      font-size: 1.5rem; } }
   header .overlay {
     background: black;
     background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.6152836134) 71%, rgba(0, 0, 0, 0.5984768908) 100%);
@@ -39,7 +52,7 @@ header {
     flex-direction: column; }
     header .overlay .container {
       flex-direction: column;
-      height: 90%;
+      height: 94%;
       justify-content: flex-end; }
       @media (min-width: 900px) {
         header .overlay .container {
@@ -52,10 +65,12 @@ header {
         @media (min-width: 900px) {
           header .overlay .container #hamburger-icon {
             display: none; } }
+        header .overlay .container #hamburger-icon:hover {
+          cursor: pointer; }
       header .overlay .container .header-content {
         flex-direction: column;
         width: 100%;
-        height: 80%;
+        height: 70%;
         justify-content: space-between;
         text-shadow: 0px 5px 4px black; }
         header .overlay .container .header-content .col1 {
@@ -63,16 +78,17 @@ header {
           text-align: center; }
           @media (min-width: 900px) {
             header .overlay .container .header-content .col1 {
+              flex-direction: row;
+              text-align: left;
               margin-top: 3em; } }
           header .overlay .container .header-content .col1 .profile-img {
             border: .2em solid white;
             border-radius: 50%; }
-          header .overlay .container .header-content .col1 .header-text {
-            margin-left: 2em; }
-            header .overlay .container .header-content .col1 .header-text h1 {
-              color: #c85132; }
+          @media (min-width: 900px) {
+            header .overlay .container .header-content .col1 .header-text {
+              margin-left: 2em; } }
         header .overlay .container .header-content .fa {
-          font-size: 48px; }
+          font-size: 2em; }
           header .overlay .container .header-content .fa:hover {
             cursor: pointer; }
 
@@ -87,9 +103,8 @@ nav {
       nav ul {
         list-style: none;
         display: flex;
-        width: 44%;
-        justify-content: space-around;
-        font-size: 1rem; }
+        width: 40%;
+        justify-content: space-around; }
         nav ul li:hover {
           color: #c85132;
           cursor: pointer;
@@ -101,10 +116,11 @@ nav {
           nav ul li:hover:active {
             color: #c85132; }
       nav .link-logos {
-        width: 24%;
+        width: 16%;
         justify-content: space-around; }
         nav .link-logos .gh-logo {
-          border-radius: 50%; }
+          border-radius: 50%;
+          color: white; }
         nav .link-logos img {
           height: 40px;
           width: 40px; }
@@ -118,5 +134,34 @@ nav {
 @media (min-width: 900px) {
   .phone-nav {
     display: none; } }
+
+.about-me {
+  color: gray; }
+  .about-me .container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3em; }
+    @media (min-width: 900px) {
+      .about-me .container {
+        font-size: 1.2em; } }
+
+.technologies {
+  background-color: #47474a; }
+  .technologies .container {
+    justify-content: space-around;
+    flex-direction: column; }
+    .technologies .container .icons {
+      flex-wrap: wrap;
+      width: 100%; }
+      .technologies .container .icons i {
+        color: #c85132;
+        font-size: 4em;
+        margin-left: 0.2em; }
+
+.row-1 {
+  margin-bottom: 1em; }
+
+.row-1, .row-2 {
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=main.css.map */
