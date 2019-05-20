@@ -9,10 +9,10 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: #f1f1f1; }
+  background-color: white; }
 
 h1 {
-  font-family: "Baloo Bhai", cursive;
+  font-family: "Nunito", sans-serif;
   color: #1e799d; }
 
 .container {
@@ -20,7 +20,7 @@ h1 {
 
 section .container {
   margin: 3em 0em; }
-  @media (min-width: 900px) {
+  @media (min-width: 768px) {
     section .container {
       width: 70%; } }
   section .container h1 {
@@ -54,15 +54,12 @@ header {
       flex-direction: column;
       height: 94%;
       justify-content: flex-end; }
-      @media (min-width: 900px) {
-        header .overlay .container {
-          justify-content: space-between; } }
       header .overlay .container #hamburger-icon {
         font-size: 2em;
         position: absolute;
         top: .2em;
         right: .5em; }
-        @media (min-width: 900px) {
+        @media (min-width: 768px) {
           header .overlay .container #hamburger-icon {
             display: none; } }
         header .overlay .container #hamburger-icon:hover {
@@ -76,7 +73,7 @@ header {
         header .overlay .container .header-content .col1 {
           flex-direction: column;
           text-align: center; }
-          @media (min-width: 900px) {
+          @media (min-width: 768px) {
             header .overlay .container .header-content .col1 {
               flex-direction: row;
               text-align: left;
@@ -84,22 +81,27 @@ header {
           header .overlay .container .header-content .col1 .profile-img {
             border: .2em solid white;
             border-radius: 50%; }
-          @media (min-width: 900px) {
+          @media (min-width: 768px) {
             header .overlay .container .header-content .col1 .header-text {
               margin-left: 2em; } }
         header .overlay .container .header-content .fa {
-          font-size: 2em; }
+          font-size: 2em;
+          margin-bottom: 0.5em; }
           header .overlay .container .header-content .fa:hover {
             cursor: pointer; }
 
 nav {
   display: none; }
-  @media (min-width: 900px) {
+  @media (min-width: 768px) {
     nav {
+      background: black;
+      background: linear-gradient(118deg, black 0%, #c85130 0%, #1d1d1d 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      padding: 1em;
+      border-radius: 4px; }
       nav ul {
         list-style: none;
         display: flex;
@@ -131,7 +133,7 @@ nav {
             -ms-transition: ease-in-out .3s;
             -o-transition: ease-in-out .3s; } }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .phone-nav {
     display: none; } }
 
@@ -141,27 +143,30 @@ nav {
     flex-direction: column;
     text-align: center;
     margin-top: 3em; }
-    @media (min-width: 900px) {
+    @media (min-width: 768px) {
       .about-me .container {
         font-size: 1.2em; } }
 
-.technologies {
-  background-color: #47474a; }
-  .technologies .container {
-    justify-content: space-around;
-    flex-direction: column; }
-    .technologies .container .icons {
-      flex-wrap: wrap;
-      width: 100%; }
-      .technologies .container .icons i {
-        color: #c85132;
-        font-size: 4em;
-        margin-left: 0.2em; }
+.technologies .container {
+  justify-content: space-around;
+  flex-direction: column; }
+  .technologies .container .icons {
+    flex-wrap: wrap;
+    width: 100%; }
+    .technologies .container .icons i {
+      color: #c85132;
+      font-size: 4em;
+      margin-left: 0.2em; }
 
 .row-1 {
   margin-bottom: 1em; }
 
 .row-1, .row-2 {
   flex-wrap: wrap; }
+
+footer {
+  display: block;
+  background: black;
+  background: linear-gradient(118deg, black 0%, #c85130 0%, #1d1d1d 100%); }
 
 /*# sourceMappingURL=main.css.map */
