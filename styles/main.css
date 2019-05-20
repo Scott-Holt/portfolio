@@ -147,15 +147,42 @@ nav {
       .about-me .container {
         font-size: 1.2em; } }
 
+.my-work {
+  flex-direction: column; }
+  .my-work .container {
+    flex-direction: column; }
+    .my-work .container .rebel-card {
+      flex-direction: column;
+      width: 50%;
+      border: 1px solid black; }
+      .my-work .container .rebel-card .card-top {
+        background-image: url("../images/rebel.png");
+        border: 1px solid black;
+        height: 400px;
+        width: 100%; }
+      .my-work .container .rebel-card .card-bottom {
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid black;
+        height: 200px; }
+        .my-work .container .rebel-card .card-bottom h1 {
+          margin: 1em 0em 0em 0em; }
+        .my-work .container .rebel-card .card-bottom p {
+          color: gray;
+          padding: 1em;
+          text-align: center; }
+
 .technologies .container {
   justify-content: space-around;
   flex-direction: column; }
+  .technologies .container h1 {
+    margin: 2em 0em 1em 0em; }
   .technologies .container .icons {
     flex-wrap: wrap;
     width: 100%; }
     .technologies .container .icons i {
       color: #c85132;
-      font-size: 4em;
+      font-size: 6em;
       margin-left: 0.2em; }
 
 .row-1 {
