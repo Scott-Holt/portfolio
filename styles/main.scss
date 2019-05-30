@@ -273,22 +273,53 @@ nav{
 
 .about-me{
     color:gray;
-    background-color:$background;
-    
+
     .container{
-        flex-direction: column;
-        text-align: center;
-        margin-top: 3em;
 
 
+        .text, .technologies{
+            flex-direction: column;
+            width: 50%;
+            padding: 2em;
+            margin: 2em;
+            background: $background;
+            box-shadow: $main-shadow;
+        }
 
-        @include desktop(){
-            font-size:1.2em;
+        .text{
+            align-self:stretch;
 
         }
-    }
-}
 
+        .technologies{
+
+            .icons{
+                flex-wrap:wrap;
+                width: 100%;
+
+                i{
+                    color:$main;
+                    font-size: 6em;
+                    margin-left:0.2em;
+                }
+            }
+                // }
+            
+            
+            .row-1{
+                margin-bottom: 1em;
+            }
+            
+            .row-1, .row-2{
+                flex-wrap:wrap;
+            }
+
+        }
+    
+
+    }
+
+}
 /////////MY WORK/////////////////////////////////////////////
 
 
@@ -298,7 +329,7 @@ nav{
     
     .container{
         flex-direction: column;
-        width:100%;
+        width: 90%;
 
         @include large-desktop(){
             width:80%;
@@ -399,38 +430,38 @@ nav{
 
 //////////////TECHNOLOGIES///////////////////////
 
-.technologies{
-background: $background;
+// .technologies{
+// background: $background;
 
-    .container{
-        justify-content: space-around;
-        flex-direction: column;
+//     .container{
+//         justify-content: space-around;
+//         flex-direction: column;
 
-        h1{
-            margin: 2em 0em 1em 0em;
-        }
+//         h1{
+//             margin: 2em 0em 1em 0em;
+//         }
 
 
-        .icons{
-            flex-wrap:wrap;
-            width: 100%;
+//         .icons{
+//             flex-wrap:wrap;
+//             width: 100%;
 
-            i{
-                color:$main;
-                font-size: 6em;
-                margin-left:0.2em;
-            }
-        }
-    }
-}
+//             i{
+//                 color:$main;
+//                 font-size: 6em;
+//                 margin-left:0.2em;
+//             }
+//         }
+//     }
+// }
 
-.row-1{
-    margin-bottom: 1em;
-}
+// .row-1{
+//     margin-bottom: 1em;
+// }
 
-.row-1, .row-2{
-    flex-wrap:wrap;
-}
+// .row-1, .row-2{
+//     flex-wrap:wrap;
+// }
 
 
 

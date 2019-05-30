@@ -136,21 +136,33 @@ nav {
     display: none; } }
 
 .about-me {
-  color: gray;
-  background-color: #dfdfdf; }
-  .about-me .container {
+  color: gray; }
+  .about-me .container .text, .about-me .container .technologies {
     flex-direction: column;
-    text-align: center;
-    margin-top: 3em; }
-    @media (min-width: 768px) {
-      .about-me .container {
-        font-size: 1.2em; } }
+    width: 50%;
+    padding: 2em;
+    margin: 2em;
+    background: #dfdfdf;
+    box-shadow: 1px 2px 6px #00000052; }
+  .about-me .container .text {
+    align-self: stretch; }
+  .about-me .container .technologies .icons {
+    flex-wrap: wrap;
+    width: 100%; }
+    .about-me .container .technologies .icons i {
+      color: #4495ce85;
+      font-size: 6em;
+      margin-left: 0.2em; }
+  .about-me .container .technologies .row-1 {
+    margin-bottom: 1em; }
+  .about-me .container .technologies .row-1, .about-me .container .technologies .row-2 {
+    flex-wrap: wrap; }
 
 .my-work {
   flex-direction: column; }
   .my-work .container {
     flex-direction: column;
-    width: 100%; }
+    width: 90%; }
     @media (min-width: 1700px) {
       .my-work .container {
         width: 80%; } }
@@ -206,27 +218,6 @@ nav {
           background-image: url("../images/to-do.png"); }
         .my-work .container .carousel .card .xenon-site {
           background-image: url("../images/xenon.png"); }
-
-.technologies {
-  background: #dfdfdf; }
-  .technologies .container {
-    justify-content: space-around;
-    flex-direction: column; }
-    .technologies .container h1 {
-      margin: 2em 0em 1em 0em; }
-    .technologies .container .icons {
-      flex-wrap: wrap;
-      width: 100%; }
-      .technologies .container .icons i {
-        color: #4495ce85;
-        font-size: 6em;
-        margin-left: 0.2em; }
-
-.row-1 {
-  margin-bottom: 1em; }
-
-.row-1, .row-2 {
-  flex-wrap: wrap; }
 
 footer {
   display: block;
