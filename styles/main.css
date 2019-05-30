@@ -12,8 +12,8 @@ body {
   background-color: white; }
 
 h1 {
-  font-family: "Nunito", sans-serif;
-  color: #1e799d; }
+  font-family: "Baloo Bhai", cursive;
+  color: #656ff3; }
 
 .container {
   width: 90%; }
@@ -106,7 +106,7 @@ nav {
         width: 40%;
         justify-content: space-around; }
         nav ul li:hover {
-          color: #c85132;
+          color: #656ff3;
           cursor: pointer;
           transition: ease-in-out .3s;
           -webkit-transition: ease-in-out .3s;
@@ -114,7 +114,7 @@ nav {
           -ms-transition: ease-in-out .3s;
           -o-transition: ease-in-out .3s; }
           nav ul li:hover:active {
-            color: #c85132; }
+            color: #656ff3; }
       nav .link-logos {
         width: 16%;
         justify-content: space-around; }
@@ -125,7 +125,7 @@ nav {
           height: 40px;
           width: 40px; }
           nav .link-logos img:hover {
-            box-shadow: 0 0 3px 3px #c85132;
+            box-shadow: 0 0 3px 3px #656ff3;
             -webkit-transition: ease-in-out .3s;
             -moz-transition: ease-in-out .3s;
             -ms-transition: ease-in-out .3s;
@@ -137,7 +137,7 @@ nav {
 
 .about-me {
   color: gray;
-  background-color: #f9f8f8; }
+  background-color: #dfdfdf; }
   .about-me .container {
     flex-direction: column;
     text-align: center;
@@ -147,33 +147,52 @@ nav {
         font-size: 1.2em; } }
 
 .my-work {
-  flex-direction: column;
-  flex-wrap: wrap; }
+  flex-direction: column; }
   .my-work .container {
     flex-direction: column; }
     .my-work .container .carousel {
-      flex-direction: column; }
+      flex-wrap: wrap; }
       .my-work .container .carousel .card {
         flex-direction: column;
         box-shadow: 1px 2px 6px #00000052;
         border-radius: 10px;
         width: 90%;
-        margin-bottom: 2em; }
+        margin: 1em;
+        max-width: 450px; }
+        @media (min-width: 1300px) {
+          .my-work .container .carousel .card {
+            max-width: 482px; } }
         .my-work .container .carousel .card .card-top {
-          height: 200px;
+          height: 400px;
           width: 100%; }
         .my-work .container .carousel .card .card-bottom {
           flex-direction: column;
           width: 100%;
           background-color: #f9f8f8; }
+          @media (min-width: 400px) {
+            .my-work .container .carousel .card .card-bottom {
+              height: 300px; } }
           .my-work .container .carousel .card .card-bottom .container {
             margin: 1em 0em; }
             .my-work .container .carousel .card .card-bottom .container h1 {
-              margin: 1em 0em 0em 0em; }
+              margin: 1em 0em 0em 0em;
+              text-align: center; }
             .my-work .container .carousel .card .card-bottom .container p {
               color: gray;
               padding: 1em;
               text-align: center; }
+            .my-work .container .carousel .card .card-bottom .container .button {
+              color: white;
+              background: #656ff3;
+              width: 100%;
+              padding: 10px;
+              text-align: center;
+              text-decoration: none;
+              margin-bottom: 1em;
+              border-radius: 10px;
+              box-shadow: 1px 2px 6px #00000052; }
+              .my-work .container .carousel .card .card-bottom .container .button:hover {
+                cursor: pointer; }
         .my-work .container .carousel .card .rebel-site {
           background-image: url("../images/rebel.png"); }
         .my-work .container .carousel .card .simon-site {
@@ -183,18 +202,20 @@ nav {
         .my-work .container .carousel .card .xenon-site {
           background-image: url("../images/xenon.png"); }
 
-.technologies .container {
-  justify-content: space-around;
-  flex-direction: column; }
-  .technologies .container h1 {
-    margin: 2em 0em 1em 0em; }
-  .technologies .container .icons {
-    flex-wrap: wrap;
-    width: 100%; }
-    .technologies .container .icons i {
-      color: #c85132;
-      font-size: 6em;
-      margin-left: 0.2em; }
+.technologies {
+  background: #dfdfdf; }
+  .technologies .container {
+    justify-content: space-around;
+    flex-direction: column; }
+    .technologies .container h1 {
+      margin: 2em 0em 1em 0em; }
+    .technologies .container .icons {
+      flex-wrap: wrap;
+      width: 100%; }
+      .technologies .container .icons i {
+        color: #656ff3;
+        font-size: 6em;
+        margin-left: 0.2em; }
 
 .row-1 {
   margin-bottom: 1em; }

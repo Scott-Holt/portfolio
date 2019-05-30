@@ -1,12 +1,14 @@
 $paragraph-font:'Roboto', sans-serif;
-// $header-font:'Baloo Bhai', cursive;
+$headers-font:'Baloo Bhai', cursive;
 $header-font: 'Nunito', sans-serif;
 
 $main:#4495ce85;
+$other-blue:#656ff3;
 $accent:#c85132;
 $blue-color:#1e799d;
-$background:#f9f8f8;
+$background:#dfdfdf;
 $main-shadow:1px 2px 6px #00000052;
+$orange-linear:linear-gradient(118deg, rgba(0,0,0,1) 0%, rgba(200,81,48,1) 0%, rgba(29,29,29,1) 100%);
 
 $large-phone:400px;
 $desktop:768px;
@@ -59,8 +61,8 @@ body{
 }
 
 h1{
-    font-family:$header-font;
-    color:$blue-color;
+    font-family:$headers-font;
+    color:$other-blue;
 }
 
 
@@ -211,7 +213,7 @@ nav{
 
             li{
                 &:hover{
-                    color:$accent;
+                    color:$other-blue;
                     cursor: pointer;
                     transition: ease-in-out .3s;
                     -webkit-transition: ease-in-out .3s;
@@ -220,7 +222,7 @@ nav{
                     -o-transition: ease-in-out .3s;
 
                     &:active{
-                        color:$accent;
+                        color:$other-blue;
                     }
                 }
             }
@@ -240,7 +242,7 @@ nav{
                 width:40px;
 
                 &:hover{
-                    box-shadow: 0 0 3px 3px $accent;
+                    box-shadow: 0 0 3px 3px $other-blue;
                     -webkit-transition: ease-in-out .3s;
                     -moz-transition: ease-in-out .3s;
                     -ms-transition: ease-in-out .3s;
@@ -286,26 +288,32 @@ nav{
 .my-work{
     flex-direction: column;
     // border:1px solid black;
-    flex-wrap: wrap;
     
     .container{
         flex-direction: column;
 
+
         .carousel{
-            flex-direction: column;
+            // flex-direction: column;
+            flex-wrap: wrap;
+            // justify-content:space-around;
 
             .card{
                 flex-direction: column;
                 box-shadow: $main-shadow;
                 border-radius: 10px;
                 width: 90%;
-                margin-bottom: 2em;
-                // border: 1px solid black;
+                margin: 1em;
+                max-width: 450px;    
                 
+                @include med-desktop(){
+                    max-width: 482px;
+                }
+
                 .card-top{
                     // background-image: url("../images/rebel.png");
                     // border: 1px solid black;
-                    height: 200px;
+                    height: 400px;
                     width: 100%;
                 }
 
@@ -313,19 +321,40 @@ nav{
                     flex-direction: column;
                     width: 100%;
                     background-color:#f9f8f8;
-                    // height: 200px;
+
+                    @include large-phone(){
+                        height:300px;
+                    }
 
                     .container{
                         margin: 1em 0em;
 
                         h1{
                             margin:1em 0em 0em 0em;
+                            text-align: center;
                         }
 
                         p{
                             color: gray;
                             padding: 1em;
                             text-align: center;
+                        }
+
+                        .button{
+                            color:white;
+                            background:$other-blue;
+                            width: 100%;
+                            padding: 10px;
+                            text-align: center;
+                            text-decoration: none;
+                            margin-bottom: 1em;
+                            border-radius: 10px;
+                            box-shadow: $main-shadow;
+
+
+                            &:hover{
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -358,7 +387,7 @@ nav{
 //////////////TECHNOLOGIES///////////////////////
 
 .technologies{
-    // background-color: #47474a;
+background: $background;
 
     .container{
         justify-content: space-around;
@@ -374,7 +403,7 @@ nav{
             width: 100%;
 
             i{
-                color:$accent;
+                color:$other-blue;
                 font-size: 6em;
                 margin-left:0.2em;
             }
@@ -400,5 +429,5 @@ nav{
 footer{
     display:block;
     background: rgb(0,0,0);
-    background: linear-gradient(118deg, rgba(0,0,0,1) 0%, rgba(200,81,48,1) 0%, rgba(29,29,29,1) 100%);
+    background: $orange-linear
 }
