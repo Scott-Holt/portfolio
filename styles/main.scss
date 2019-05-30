@@ -5,6 +5,8 @@ $header-font: 'Nunito', sans-serif;
 $main:#4495ce85;
 $accent:#c85132;
 $blue-color:#1e799d;
+$background:#f9f8f8;
+$main-shadow:1px 2px 6px #00000052;
 
 $large-phone:400px;
 $desktop:768px;
@@ -189,8 +191,8 @@ nav{
     display:none;
 
     @include desktop(){
-        background: rgb(0,0,0);
-        background: linear-gradient(118deg, rgba(0,0,0,1) 0%, rgba(200,81,48,1) 0%, rgba(29,29,29,1) 100%);
+        // background: rgb(0,0,0);
+        // background: linear-gradient(118deg, rgba(0,0,0,1) 0%, rgba(200,81,48,1) 0%, rgba(29,29,29,1) 100%);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -262,6 +264,7 @@ nav{
 
 .about-me{
     color:gray;
+    background-color:$background;
     
     .container{
         flex-direction: column;
@@ -283,36 +286,64 @@ nav{
 .my-work{
     flex-direction: column;
     // border:1px solid black;
-
+    flex-wrap: wrap;
+    
     .container{
         flex-direction: column;
 
-        .rebel-card{
+        .carousel{
             flex-direction: column;
-            width: 50%;
-            border: 1px solid black;
-            
-            .card-top{
-                background-image: url("../images/rebel.png");
-                border: 1px solid black;
-                height: 400px;
-                width: 100%;
-            }
 
-            .card-bottom{
+            .card{
                 flex-direction: column;
-                width: 100%;
-                border: 1px solid black;
-                height: 200px;
-
-                h1{
-                    margin:1em 0em 0em 0em;
+                box-shadow: $main-shadow;
+                border-radius: 10px;
+                width: 90%;
+                margin-bottom: 2em;
+                // border: 1px solid black;
+                
+                .card-top{
+                    // background-image: url("../images/rebel.png");
+                    // border: 1px solid black;
+                    height: 200px;
+                    width: 100%;
                 }
 
-                p{
-                    color: gray;
-                    padding: 1em;
-                    text-align: center;
+                .card-bottom{
+                    flex-direction: column;
+                    width: 100%;
+                    background-color:#f9f8f8;
+                    // height: 200px;
+
+                    .container{
+                        margin: 1em 0em;
+
+                        h1{
+                            margin:1em 0em 0em 0em;
+                        }
+
+                        p{
+                            color: gray;
+                            padding: 1em;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .rebel-site{
+                    background-image: url("../images/rebel.png");
+                }
+
+                .simon-site{
+                    background-image: url("../images/simon.png");
+                }
+
+                .to-do-site{
+                    background-image:url("../images/to-do.png");
+                }
+
+                .xenon-site{
+                    background-image:url("../images/xenon.png");
                 }
             }
         }

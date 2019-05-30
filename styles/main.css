@@ -94,8 +94,6 @@ nav {
   display: none; }
   @media (min-width: 768px) {
     nav {
-      background: black;
-      background: linear-gradient(118deg, black 0%, #c85130 0%, #1d1d1d 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -138,7 +136,8 @@ nav {
     display: none; } }
 
 .about-me {
-  color: gray; }
+  color: gray;
+  background-color: #f9f8f8; }
   .about-me .container {
     flex-direction: column;
     text-align: center;
@@ -148,29 +147,41 @@ nav {
         font-size: 1.2em; } }
 
 .my-work {
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: wrap; }
   .my-work .container {
     flex-direction: column; }
-    .my-work .container .rebel-card {
-      flex-direction: column;
-      width: 50%;
-      border: 1px solid black; }
-      .my-work .container .rebel-card .card-top {
-        background-image: url("../images/rebel.png");
-        border: 1px solid black;
-        height: 400px;
-        width: 100%; }
-      .my-work .container .rebel-card .card-bottom {
+    .my-work .container .carousel {
+      flex-direction: column; }
+      .my-work .container .carousel .card {
         flex-direction: column;
-        width: 100%;
-        border: 1px solid black;
-        height: 200px; }
-        .my-work .container .rebel-card .card-bottom h1 {
-          margin: 1em 0em 0em 0em; }
-        .my-work .container .rebel-card .card-bottom p {
-          color: gray;
-          padding: 1em;
-          text-align: center; }
+        box-shadow: 1px 2px 6px #00000052;
+        border-radius: 10px;
+        width: 90%;
+        margin-bottom: 2em; }
+        .my-work .container .carousel .card .card-top {
+          height: 200px;
+          width: 100%; }
+        .my-work .container .carousel .card .card-bottom {
+          flex-direction: column;
+          width: 100%;
+          background-color: #f9f8f8; }
+          .my-work .container .carousel .card .card-bottom .container {
+            margin: 1em 0em; }
+            .my-work .container .carousel .card .card-bottom .container h1 {
+              margin: 1em 0em 0em 0em; }
+            .my-work .container .carousel .card .card-bottom .container p {
+              color: gray;
+              padding: 1em;
+              text-align: center; }
+        .my-work .container .carousel .card .rebel-site {
+          background-image: url("../images/rebel.png"); }
+        .my-work .container .carousel .card .simon-site {
+          background-image: url("../images/simon.png"); }
+        .my-work .container .carousel .card .to-do-site {
+          background-image: url("../images/to-do.png"); }
+        .my-work .container .carousel .card .xenon-site {
+          background-image: url("../images/xenon.png"); }
 
 .technologies .container {
   justify-content: space-around;
