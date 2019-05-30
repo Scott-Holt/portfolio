@@ -13,7 +13,7 @@ body {
 
 h1 {
   font-family: "Baloo Bhai", cursive;
-  color: #656ff3; }
+  color: #4495ce85; }
 
 .container {
   width: 90%; }
@@ -106,7 +106,7 @@ nav {
         width: 40%;
         justify-content: space-around; }
         nav ul li:hover {
-          color: #656ff3;
+          color: #4495ce85;
           cursor: pointer;
           transition: ease-in-out .3s;
           -webkit-transition: ease-in-out .3s;
@@ -114,7 +114,7 @@ nav {
           -ms-transition: ease-in-out .3s;
           -o-transition: ease-in-out .3s; }
           nav ul li:hover:active {
-            color: #656ff3; }
+            color: #4495ce85; }
       nav .link-logos {
         width: 16%;
         justify-content: space-around; }
@@ -125,7 +125,7 @@ nav {
           height: 40px;
           width: 40px; }
           nav .link-logos img:hover {
-            box-shadow: 0 0 3px 3px #656ff3;
+            box-shadow: 0 0 3px 3px #4495ce85;
             -webkit-transition: ease-in-out .3s;
             -moz-transition: ease-in-out .3s;
             -ms-transition: ease-in-out .3s;
@@ -149,7 +149,11 @@ nav {
 .my-work {
   flex-direction: column; }
   .my-work .container {
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
+    @media (min-width: 1700px) {
+      .my-work .container {
+        width: 80%; } }
     .my-work .container .carousel {
       flex-wrap: wrap; }
       .my-work .container .carousel .card {
@@ -161,7 +165,7 @@ nav {
         max-width: 450px; }
         @media (min-width: 1300px) {
           .my-work .container .carousel .card {
-            max-width: 482px; } }
+            max-width: 564px; } }
         .my-work .container .carousel .card .card-top {
           height: 400px;
           width: 100%; }
@@ -183,14 +187,15 @@ nav {
               text-align: center; }
             .my-work .container .carousel .card .card-bottom .container .button {
               color: white;
-              background: #656ff3;
+              background: #4495ce85;
               width: 100%;
               padding: 10px;
               text-align: center;
               text-decoration: none;
               margin-bottom: 1em;
               border-radius: 10px;
-              box-shadow: 1px 2px 6px #00000052; }
+              box-shadow: 1px 2px 6px #00000052;
+              width: 80%; }
               .my-work .container .carousel .card .card-bottom .container .button:hover {
                 cursor: pointer; }
         .my-work .container .carousel .card .rebel-site {
@@ -213,7 +218,7 @@ nav {
       flex-wrap: wrap;
       width: 100%; }
       .technologies .container .icons i {
-        color: #656ff3;
+        color: #4495ce85;
         font-size: 6em;
         margin-left: 0.2em; }
 
