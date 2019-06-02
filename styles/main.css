@@ -140,6 +140,7 @@ nav {
   .about-me .container .text, .about-me .container .technologies {
     flex-direction: column;
     width: 50%;
+    height: 400px;
     padding: 2em;
     margin: 2em;
     background: #dfdfdf;
@@ -222,6 +223,6 @@ nav {
 footer {
   display: block;
   background: black;
-  background: linear-gradient(118deg, black 0%, #c85130 0%, #1d1d1d 100%); }
+  background: #1e799d; }
 
 /*# sourceMappingURL=main.css.map */
