@@ -284,7 +284,7 @@ nav{
             padding: 2em;
             margin: 2em;
             background: $background;
-            box-shadow: $main-shadow;
+            // box-shadow: $main-shadow;
         }
 
         .text{
@@ -395,6 +395,7 @@ nav{
                             border-radius: 10px;
                             box-shadow: $main-shadow;
                             width: 80%;
+                            margin-bottom:1em;
 
 
                             &:hover{

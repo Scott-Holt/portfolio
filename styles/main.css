@@ -143,8 +143,7 @@ nav {
     height: 400px;
     padding: 2em;
     margin: 2em;
-    background: #dfdfdf;
-    box-shadow: 1px 2px 6px #00000052; }
+    background: #dfdfdf; }
   .about-me .container .text {
     align-self: stretch; }
   .about-me .container .technologies .icons {
@@ -208,7 +207,8 @@ nav {
               margin-bottom: 1em;
               border-radius: 10px;
               box-shadow: 1px 2px 6px #00000052;
-              width: 80%; }
+              width: 80%;
+              margin-bottom: 1em; }
               .my-work .container .carousel .card .card-bottom .container .button:hover {
                 cursor: pointer; }
         .my-work .container .carousel .card .rebel-site {
