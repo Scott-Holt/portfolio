@@ -2,7 +2,8 @@ $paragraph-font:'Roboto', sans-serif;
 $headers-font:'Baloo Bhai', cursive;
 $header-font: 'Nunito', sans-serif;
 
-$main:#4495ce85;
+// $main:#4495ce85;
+$main:#4495cef2;
 $secondary:#9c6767;
 $other-blue:#656ff3;
 $accent:#c85132;
@@ -10,6 +11,7 @@ $other-blue:#1e799d;
 $background:#f7f7f7;
 $main-shadow:1px 2px 6px #00000052;
 $orange-linear:linear-gradient(118deg, rgba(0,0,0,1) 0%, rgba(200,81,48,1) 0%, rgba(29,29,29,1) 100%);
+$dark-gray:#585858;
 
 $large-phone:400px;
 $desktop:768px;
@@ -88,6 +90,10 @@ h1{
     &:hover{
         cursor: pointer;
     }
+
+    @include desktop(){
+        width: 60%;
+    }
 }
 
 
@@ -101,11 +107,6 @@ h1{
 section{
     .container{
         margin: 3em 0em;
-
-        @include desktop(){
-            width:70%;
-        }
-        
 
         h1{
             margin-bottom: 1em;
@@ -232,7 +233,6 @@ nav{
             display: flex;
             width: 40%;
             justify-content: space-around;
-            // font-size: 1rem;
 
             li{
                 &:hover{
@@ -293,21 +293,12 @@ nav{
     .container{
         flex-direction: column;
 
-        @include desktop(){
-            flex-direction: row;
-        }
-
         .text, .technologies{
             flex-direction: column;
             padding: 2em;
             background: $background;
             margin-bottom:1em;
 
-            @include desktop(){
-                height:400px;
-                margin: 2em;
-                width: 50%;
-            }
         }
 
         .text{
@@ -316,38 +307,36 @@ nav{
         }
 
         .technologies{
+            @include desktop(){
+                width: 100%;
+            }
 
             h1{
                 text-align: center;
             }
 
             .icons{
-                flex-wrap:wrap;
-                width: 100%;
+                flex-wrap: wrap;
+
+                @include desktop(){
+                    width: 100%;
+                }
 
                 i{
-                    color:$secondary;
+                    color:$dark-gray;
                     font-size: 6em;
                     margin-left:0.2em;
                 }
             }
-            
-            
-            .row-1{
-                margin-bottom: 1em;
-            }
-            
-            .row-1, .row-2{
-                flex-wrap:wrap;
-            }
-
         }
-    
-
     }
 
     .connect{
         margin-top:2em;
+
+        @include desktop(){
+            margin-top: 4em;
+        }
     }
 
 }
@@ -356,31 +345,22 @@ nav{
 
 .my-work{
     flex-direction: column;
+    background-color:#f3f3f3;
+
     
     .container{
         flex-direction: column;
-        width: 90%;
-
-        @include large-desktop(){
-            width:80%;
+        
+        .recent{
+            font-size:2.4em;
         }
-
-
-        // .carousel{
-        //     flex-wrap: wrap;
 
         .card{
             flex-direction: column;
             box-shadow: 1px 2px 6px #00000052;
             border-radius: 10px;
-            margin-bottom:1em;
-            /* width: 90%; */
-            /* margin: 1em; */
-            /* max-width: 450px; */   
-            
-            @include med-desktop(){
-                max-width: 564px;
-            }
+            margin-bottom:3em;
+            width:100%;            
 
             .card-top{
                 height: 400px;
@@ -402,12 +382,19 @@ nav{
                     h1{
                         margin:1em 0em 0em 0em;
                         text-align: center;
+
                     }
 
                     p{
                         color: gray;
                         padding: 1em;
                         text-align: center;
+                    }
+
+                    .website{
+                       @include desktop(){
+                        margin-top: 2em;
+                       }
                     }
                 }
             }
@@ -429,7 +416,6 @@ nav{
                 background-image:url("../images/xenon.png");
             }
         }
-        // }
     }
 }
 
@@ -442,5 +428,33 @@ nav{
 footer{
     display:block;
     background: rgb(0,0,0);
-    background: $other-blue;
+    background: $dark-gray;
+
+    nav{
+        display: block;
+
+        @include desktop(){
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .link-logos{
+            display:none;
+
+            @include desktop(){
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 2em;
+        }
+    }
 }
