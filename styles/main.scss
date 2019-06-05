@@ -320,6 +320,7 @@ nav{
 
                 @include desktop(){
                     width: 100%;
+                    flex-wrap: nowrap;
                 }
 
                 i{

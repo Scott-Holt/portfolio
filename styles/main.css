@@ -169,7 +169,8 @@ nav {
       flex-wrap: wrap; }
       @media (min-width: 768px) {
         .about-me .container .technologies .icons {
-          width: 100%; } }
+          width: 100%;
+          flex-wrap: nowrap; } }
       .about-me .container .technologies .icons i {
         color: #585858;
         font-size: 6em;
