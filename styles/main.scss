@@ -15,6 +15,7 @@ $dark-gray:#585858;
 
 $large-phone:400px;
 $desktop:768px;
+$laptop:1024px;
 $med-desktop:1300px;
 $large-desktop:1700px;
 
@@ -29,6 +30,14 @@ $large-desktop:1700px;
         @content;
     }
 }
+
+@mixin laptop {
+    @media(min-width:#{$laptop}){
+        @content;
+    }
+}
+
+
 
 @mixin med-desktop(){
     @media(min-width:#{$med-desktop}){
@@ -94,6 +103,10 @@ h1{
     @include desktop(){
         width: 60%;
     }
+
+    @include laptop(){
+        width: 40%;
+    }
 }
 
 
@@ -101,6 +114,14 @@ h1{
 
 .container{
     width:90%;
+
+    @include desktop(){
+        width:80%;
+    }
+
+    @include laptop(){
+        width:90%;
+    }
 
 }
 
@@ -348,12 +369,19 @@ nav{
     flex-direction: column;
     background-color:#f3f3f3;
 
+    .recent{
+        font-size:2.4em;
+        margin-top: 2em;
+    }
+
     
     .container{
         flex-direction: column;
-        
-        .recent{
-            font-size:2.4em;
+
+        @include laptop(){
+            flex-wrap: wrap;
+            flex-direction: row;
+
         }
 
         .card{
@@ -361,12 +389,18 @@ nav{
             box-shadow: 1px 2px 6px #00000052;
             border-radius: 10px;
             margin-bottom:3em;
-            width:100%;            
+            width:100%;   
+            
+            @include laptop(){
+                width: 46%;
+                margin:1em;
+            }
 
             .card-top{
                 height: 400px;
                 width: 100%;
             }
+
 
             .card-bottom{
                 flex-direction: column;
@@ -379,6 +413,8 @@ nav{
 
                 .container{
                     margin: 1em 0em;
+                    align-items: flex-end;
+                    height: 100%;
 
                     h1{
                         margin:1em 0em 0em 0em;
@@ -392,9 +428,20 @@ nav{
                         text-align: center;
                     }
 
+                    .code{
+
+                        @include laptop(){
+                         background-color:$dark-gray;
+                        }
+                    }
+
                     .website{
                        @include desktop(){
                         margin-top: 2em;
+                       }
+
+                       @include laptop(){
+                           margin-top:0em;
                        }
                     }
                 }
@@ -421,7 +468,15 @@ nav{
 }
 
 
+// .to-do-card{
+//     .container{
+//         flex-direction:column;
 
+//         .button{
+//             flex-direction: row;
+//         }
+//     }
+// }
 
 
 /////////FOOTER///////////////////////////////////////////// 
@@ -433,6 +488,7 @@ footer{
 
     nav{
         display: block;
+    
 
         @include desktop(){
             justify-content: center;
@@ -440,22 +496,38 @@ footer{
             display: flex;
         }
 
-        .link-logos{
-            display:none;
+        .container{
+            // border:1px solid white;
+            padding: 2em;
 
             @include desktop(){
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
+                padding:1em 0em;
             }
-            
-        }
 
-        ul{
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            padding: 2em;
+
+            .link-logos{
+                display:none;
+
+                @include desktop(){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 20%;
+                }
+                
+            }
+
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+
+                @include desktop(){
+                   width:80%;
+                }
+            }
         }
     }
 }

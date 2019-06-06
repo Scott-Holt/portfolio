@@ -31,9 +31,18 @@ h1 {
   @media (min-width: 768px) {
     .button {
       width: 60%; } }
+  @media (min-width: 1024px) {
+    .button {
+      width: 40%; } }
 
 .container {
   width: 90%; }
+  @media (min-width: 768px) {
+    .container {
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .container {
+      width: 90%; } }
 
 section .container {
   margin: 3em 0em; }
@@ -184,16 +193,25 @@ nav {
 .my-work {
   flex-direction: column;
   background-color: #f3f3f3; }
+  .my-work .recent {
+    font-size: 2.4em;
+    margin-top: 2em; }
   .my-work .container {
     flex-direction: column; }
-    .my-work .container .recent {
-      font-size: 2.4em; }
+    @media (min-width: 1024px) {
+      .my-work .container {
+        flex-wrap: wrap;
+        flex-direction: row; } }
     .my-work .container .card {
       flex-direction: column;
       box-shadow: 1px 2px 6px #00000052;
       border-radius: 10px;
       margin-bottom: 3em;
       width: 100%; }
+      @media (min-width: 1024px) {
+        .my-work .container .card {
+          width: 46%;
+          margin: 1em; } }
       .my-work .container .card .card-top {
         height: 400px;
         width: 100%; }
@@ -205,7 +223,9 @@ nav {
           .my-work .container .card .card-bottom {
             height: 300px; } }
         .my-work .container .card .card-bottom .container {
-          margin: 1em 0em; }
+          margin: 1em 0em;
+          align-items: flex-end;
+          height: 100%; }
           .my-work .container .card .card-bottom .container h1 {
             margin: 1em 0em 0em 0em;
             text-align: center; }
@@ -213,9 +233,15 @@ nav {
             color: gray;
             padding: 1em;
             text-align: center; }
+          @media (min-width: 1024px) {
+            .my-work .container .card .card-bottom .container .code {
+              background-color: #585858; } }
           @media (min-width: 768px) {
             .my-work .container .card .card-bottom .container .website {
               margin-top: 2em; } }
+          @media (min-width: 1024px) {
+            .my-work .container .card .card-bottom .container .website {
+              margin-top: 0em; } }
       .my-work .container .card .rebel-site {
         background-image: url("../images/rebel.png"); }
       .my-work .container .card .simon-site {
@@ -236,17 +262,27 @@ footer {
         justify-content: center;
         align-items: center;
         display: flex; } }
-    footer nav .link-logos {
-      display: none; }
-      @media (min-width: 768px) {
-        footer nav .link-logos {
-          display: flex;
-          align-items: center;
-          justify-content: space-around; } }
-    footer nav ul {
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
+    footer nav .container {
       padding: 2em; }
+      @media (min-width: 768px) {
+        footer nav .container {
+          justify-content: space-between;
+          padding: 1em 0em; } }
+      footer nav .container .link-logos {
+        display: none; }
+        @media (min-width: 768px) {
+          footer nav .container .link-logos {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 20%; } }
+      footer nav .container ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none; }
+        @media (min-width: 768px) {
+          footer nav .container ul {
+            width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */
