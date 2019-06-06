@@ -9,7 +9,8 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: white; }
+  background-color: white;
+  max-width: 2300px; }
 
 h1 {
   font-family: "Baloo Bhai", cursive;
@@ -43,6 +44,12 @@ h1 {
   @media (min-width: 1024px) {
     .container {
       width: 90%; } }
+  @media (min-width: 1500px) {
+    .container {
+      width: 75%; } }
+  @media (min-width: 1700px) {
+    .container {
+      width: 60%; } }
 
 section .container {
   margin: 3em 0em; }
@@ -169,6 +176,12 @@ nav {
       margin-bottom: 1em; }
     .about-me .container .text {
       align-self: stretch; }
+      @media (min-width: 1024px) {
+        .about-me .container .text p {
+          width: 75%; } }
+      @media (min-width: 1300px) {
+        .about-me .container .text p {
+          width: 50%; } }
     @media (min-width: 768px) {
       .about-me .container .technologies {
         width: 100%; } }
@@ -224,7 +237,6 @@ nav {
             height: 300px; } }
         .my-work .container .card .card-bottom .container {
           margin: 1em 0em;
-          align-items: flex-end;
           height: 100%; }
           .my-work .container .card .card-bottom .container h1 {
             margin: 1em 0em 0em 0em;
