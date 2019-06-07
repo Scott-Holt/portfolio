@@ -103,7 +103,7 @@ header {
         font-size: 2em;
         position: absolute;
         top: .2em;
-        right: .5em; }
+        left: .5em; }
         @media (min-width: 768px) {
           header .overlay .container #hamburger-icon {
             display: none; } }
@@ -115,6 +115,12 @@ header {
         height: 70%;
         justify-content: space-between;
         text-shadow: 0px 5px 4px black; }
+        @media (max-height: 557px) {
+          header .overlay .container .header-content {
+            height: 90%; } }
+        @media (max-height: 363px) {
+          header .overlay .container .header-content {
+            height: 97%; } }
         header .overlay .container .header-content .col1 {
           flex-direction: column;
           text-align: center; }
@@ -180,11 +186,17 @@ nav {
   -moz-transition: ease-in-out .3s;
   -ms-transition: ease-in-out .3s;
   -o-transition: ease-in-out .3s; }
+  @media (max-height: 557px) {
+    .phone-nav {
+      font-size: .7em; } }
   .phone-nav span {
     position: absolute;
     top: 10px;
     right: 32px;
     font-size: 4em; }
+    @media (max-height: 363px) {
+      .phone-nav span {
+        display: none; } }
   .phone-nav ul {
     list-style-type: none;
     width: 100%;
@@ -193,7 +205,12 @@ nav {
     align-items: center;
     flex-direction: column;
     /* justify-content: space-around; */
-    font-size: 3em; }
+    font-size: 2em;
+    margin-top: 3em;
+    /* height: 44%; */ }
+    @media (max-height: 363px) {
+      .phone-nav ul {
+        margin-top: 0em; } }
     .phone-nav ul li {
       width: 100%;
       border-top: 1px solid;
@@ -211,10 +228,16 @@ nav {
         -o-transition: ease-in-out .3s; }
   .phone-nav .link-logos {
     margin-top: 3em;
-    width: 65%;
+    width: 100%;
     justify-content: space-around; }
-    .phone-nav .link-logos .gh-logo {
-      height: 89px; }
+    @media (max-height: 557px) {
+      .phone-nav .link-logos {
+        margin-bottom: 2em; } }
+    @media (min-width: 768px) {
+      .phone-nav .link-logos {
+        width: 50%; } }
+    .phone-nav .link-logos img {
+      height: 65px; }
 
 .about-me {
   color: gray; }
@@ -224,7 +247,8 @@ nav {
       flex-direction: column;
       padding: 4em;
       background: #f7f7f7;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      box-shadow: 1px 2px 6px #00000052; }
     .about-me .container .text {
       align-self: stretch; }
       @media (min-width: 1024px) {
@@ -243,8 +267,7 @@ nav {
       flex-wrap: wrap; }
       @media (min-width: 768px) {
         .about-me .container .technologies .icons {
-          width: 100%;
-          flex-wrap: nowrap; } }
+          width: 100%; } }
       .about-me .container .technologies .icons i {
         color: #585858;
         font-size: 6em;
@@ -269,6 +292,7 @@ nav {
         flex-direction: row; } }
     .my-work .container .card {
       flex-direction: column;
+      box-shadow: 1px 2px 6px #00000052;
       border-radius: 10px;
       margin-bottom: 3em;
       width: 100%; }
