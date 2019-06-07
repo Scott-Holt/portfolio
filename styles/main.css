@@ -78,8 +78,6 @@ a {
     -moz-transition: ease-in-out .3s;
     -ms-transition: ease-in-out .3s;
     -o-transition: ease-in-out .3s; }
-    a:hover:active {
-      color: #4495cef2; }
 
 header {
   background-image: url("../images/bg-image1.jpg");
