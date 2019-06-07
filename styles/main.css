@@ -13,8 +13,9 @@ body {
   max-width: 2300px; }
 
 h1 {
-  font-family: "Baloo Bhai", cursive;
-  color: #4495cef2; }
+  font-family: "Nunito", sans-serif;
+  color: #4495cef2;
+  text-transform: to-upper-case; }
 
 .button {
   color: white;
@@ -65,6 +66,20 @@ section .container {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+
+a {
+  text-decoration: none;
+  color: white; }
+  a:hover {
+    color: #4495cef2;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+    -webkit-transition: ease-in-out .3s;
+    -moz-transition: ease-in-out .3s;
+    -ms-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s; }
+    a:hover:active {
+      color: #4495cef2; }
 
 header {
   background-image: url("../images/bg-image1.jpg");
@@ -124,6 +139,7 @@ nav {
   display: none; }
   @media (min-width: 768px) {
     nav {
+      display: block;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -135,16 +151,6 @@ nav {
         display: flex;
         width: 40%;
         justify-content: space-around; }
-        nav ul li:hover {
-          color: #4495cef2;
-          cursor: pointer;
-          transition: ease-in-out .3s;
-          -webkit-transition: ease-in-out .3s;
-          -moz-transition: ease-in-out .3s;
-          -ms-transition: ease-in-out .3s;
-          -o-transition: ease-in-out .3s; }
-          nav ul li:hover:active {
-            color: #4495cef2; }
       nav .link-logos {
         width: 16%;
         justify-content: space-around; }
@@ -161,9 +167,54 @@ nav {
             -ms-transition: ease-in-out .3s;
             -o-transition: ease-in-out .3s; } }
 
-@media (min-width: 768px) {
-  .phone-nav {
-    display: none; } }
+.phone-nav {
+  position: absolute;
+  top: 0px;
+  left: -70%;
+  width: 70%;
+  height: 100vh;
+  background-color: #4495cef2;
+  flex-direction: column;
+  transition: ease-in-out .3s;
+  -webkit-transition: ease-in-out .3s;
+  -moz-transition: ease-in-out .3s;
+  -ms-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s; }
+  .phone-nav span {
+    position: absolute;
+    top: 10px;
+    right: 32px;
+    font-size: 4em; }
+  .phone-nav ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    font-size: 3em; }
+    .phone-nav ul li {
+      width: 100%;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      display: flex;
+      justify-content: center;
+      padding: .5em;
+      background-color: #44424282; }
+      .phone-nav ul li:hover {
+        background-color: #585858;
+        transition: ease-in-out .3s;
+        -webkit-transition: ease-in-out .3s;
+        -moz-transition: ease-in-out .3s;
+        -ms-transition: ease-in-out .3s;
+        -o-transition: ease-in-out .3s; }
+  .phone-nav .link-logos {
+    margin-top: 3em;
+    width: 65%;
+    justify-content: space-around; }
+    .phone-nav .link-logos .gh-logo {
+      height: 97px; }
 
 .about-me {
   color: gray; }
@@ -171,7 +222,7 @@ nav {
     flex-direction: column; }
     .about-me .container .text, .about-me .container .technologies {
       flex-direction: column;
-      padding: 2em;
+      padding: 4em;
       background: #f7f7f7;
       margin-bottom: 1em; }
     .about-me .container .text {
@@ -186,7 +237,8 @@ nav {
       .about-me .container .technologies {
         width: 100%; } }
     .about-me .container .technologies h1 {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 2em; }
     .about-me .container .technologies .icons {
       flex-wrap: wrap; }
       @media (min-width: 768px) {
@@ -217,7 +269,6 @@ nav {
         flex-direction: row; } }
     .my-work .container .card {
       flex-direction: column;
-      box-shadow: 1px 2px 6px #00000052;
       border-radius: 10px;
       margin-bottom: 3em;
       width: 100%; }
@@ -295,6 +346,6 @@ footer {
         list-style-type: none; }
         @media (min-width: 768px) {
           footer nav .container ul {
-            width: 80%; } }
+            width: 55%; } }
 
 /*# sourceMappingURL=main.css.map */

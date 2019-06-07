@@ -87,8 +87,9 @@ body{
 }
 
 h1{
-    font-family:$headers-font;
+    font-family:$header-font;
     color:$main;
+    text-transform: to-upper-case;
 }
 
 .button{
@@ -163,7 +164,25 @@ section{
     background-repeat: no-repeat; 
 }
 
+a{
+    text-decoration: none;
+    color: white;
 
+    &:hover{
+        color:$main;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        -webkit-transition: ease-in-out .3s;
+        -moz-transition: ease-in-out .3s;
+        -ms-transition: ease-in-out .3s;
+        -o-transition: ease-in-out .3s;
+
+        &:active{
+            color:$main;
+        }
+    }
+
+}
 
 //////////HEADER////////////////
 
@@ -256,6 +275,7 @@ nav{
     display:none;
 
     @include desktop(){
+        display:block;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -271,21 +291,6 @@ nav{
             width: 40%;
             justify-content: space-around;
 
-            li{
-                &:hover{
-                    color:$main;
-                    cursor: pointer;
-                    transition: ease-in-out .3s;
-                    -webkit-transition: ease-in-out .3s;
-                    -moz-transition: ease-in-out .3s;
-                    -ms-transition: ease-in-out .3s;
-                    -o-transition: ease-in-out .3s;
-
-                    &:active{
-                        color:$main;
-                    }
-                }
-            }
         }
 
         .link-logos{
@@ -316,8 +321,66 @@ nav{
 
 
 .phone-nav{
-    @include desktop(){
-        display:none;
+    position: absolute;
+    top: 0px;
+    left: -70%;
+    width: 70%;
+    height: 100vh;
+    background-color:$main;
+    flex-direction: column;
+    transition:ease-in-out .3s;
+    -webkit-transition:ease-in-out .3s;
+    -moz-transition:ease-in-out .3s;
+    -ms-transition:ease-in-out .3s;
+    -o-transition:ease-in-out .3s;
+
+    span{
+        position: absolute;
+        top: 10px;
+        right: 32px;
+        font-size: 4em;
+    }
+
+    ul{
+        list-style-type: none;
+        width: 100%;
+        // height: 68%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        font-size: 3em;
+
+        li{
+            width: 100%;
+            border-top:1px solid;
+            border-bottom:1px solid;
+            display: flex;
+            justify-content: center;
+            padding: .5em;
+            background-color: #44424282;
+
+            &:hover{
+                background-color:$dark-gray;
+                transition:ease-in-out .3s;
+                -webkit-transition:ease-in-out .3s;
+                -moz-transition:ease-in-out .3s;
+                -ms-transition:ease-in-out .3s;
+                -o-transition:ease-in-out .3s;
+            }
+        }
+    }
+
+    .link-logos{
+        margin-top: 3em;
+        width: 65%;
+        // border: 1px solid;
+        justify-content: space-around;
+
+        .gh-logo{
+            height: 97px;
+        }
     }
 }
 
@@ -332,7 +395,7 @@ nav{
 
         .text, .technologies{
             flex-direction: column;
-            padding: 2em;
+            padding: 4em;
             background: $background;
             margin-bottom:1em;
 
@@ -361,6 +424,7 @@ nav{
 
             h1{
                 text-align: center;
+                margin-bottom:2em;
             }
 
             .icons{
@@ -413,7 +477,7 @@ nav{
 
         .card{
             flex-direction: column;
-            box-shadow: 1px 2px 6px #00000052;
+            // box-shadow: 1px 2px 6px #00000052;
             border-radius: 10px;
             margin-bottom:3em;
             width:100%;   
@@ -551,7 +615,7 @@ footer{
                 list-style-type: none;
 
                 @include desktop(){
-                   width:80%;
+                    width: 55%;
                 }
             }
         }
