@@ -28,8 +28,26 @@
             browser</a> to improve your experience.</p>
     <![endif] -->
 
-    <header class="flex background-img">
+    <header class="flex background-img" id="home">
         <div class="overlay flex">
+            <nav>
+                <!-- <div class="desktop-nav"> -->
+                <ul>
+                    <li class="list-item"><a href="#home">Home</a></li>
+                    <li class="list-item"><a href="#about">About</a></li>
+                    <li class="list-item"><a href="#projects">Projects</a></li>
+                    <li class="list-item"><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="link-logos flex">
+                    <a href="https://github.com/Scott-Holt"><img class="gh-logo"
+                            src="./images/GitHub-Mark-Light-120px-plus.png" /></a>
+                    <a href="https://www.linkedin.com/in/scott-holt-56a10317b/"><img class="linkedin-logo"
+                            src="./images/In-White-40@2x.png" /></a>
+                </div>
+                <!-- </div> -->
+            </nav>
+
             <div class="container flex">
                 <nav>
                     <!-- <div class="desktop-nav"> -->
@@ -61,26 +79,29 @@
                         </div>
                     </div>
                     <div class="col2">
-                        <i class="fa fa-chevron-circle-down"></i>
+                        <a href="#about"><i class="fa fa-chevron-circle-down"></i></a>
+                        <!----THIS MIGHT NOT BR RIGHT..CHECK THIS. THE A TAGS MAY NEED TO GO IN BETWEEN THE I TAGS-->
                     </div>
                 </div>
-
-
-
-                <!-- /////////////////PHONE NAV/////////////////////////// -->
-                <nav class="phone-nav" id="mobile-nav">
-                    <img class="nav-logo" src="./images/index-images/Logo-White.png" alt="rebel logo">
-                    <span id="close-icon">&#215;</span>
-                    <ul>
-                        <li class="list-item"><a href="index.html">Home</a></li>
-                        <li class="list-item"><a href="the-rebellion.html">The Rebellion</a></li>
-                        <li class="list-item"><a href="services.html">Our Services</a></li>
-                        <li class="list-item"><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <!-- /////////////////PHONE NAV/////////////////////////// -->
-
             </div>
+            <!-- /////////////////PHONE NAV/////////////////////////// -->
+            <div class="phone-nav flex" id="mobile-nav">
+                <span class="close-icon">&#215;</span>
+                <ul>
+                    <li class="list-item close-icon"><a href="#home">Home</a></li>
+                    <li class="list-item close-icon"><a href="#about">About</a></li>
+                    <li class="list-item close-icon"><a href="#projects">Projects</a></li>
+                    <li class="list-item close-icon"><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="link-logos flex">
+                    <a href="https://github.com/Scott-Holt"><img class="gh-logo"
+                            src="./images/GitHub-Mark-Light-120px-plus.png" /></a>
+                    <a href="https://www.linkedin.com/in/scott-holt-56a10317b/"><img class="linkedin-logo"
+                            src="./images/In-White-40@2x.png" /></a>
+                </div>
+            </div>
+            <!-- /////////////////PHONE NAV/////////////////////////// -->
         </div>
     </header>
 
@@ -88,7 +109,7 @@
     <!-- ///////////////////////ABOUT ME////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- ///////////////////////ABOUT ME////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <section class="about-me  flex">
+    <section id="about" class="about-me  flex">
         <div class="container flex">
             <div class="text flex">
                 <h1>About Me</h1>
@@ -107,7 +128,7 @@
 
                 </p>
                 <a class="button connect" href="https://www.linkedin.com/in/scott-holt-56a10317b/"
-                    target="_blank">linkedin</a>
+                    target="_blank">LinkedIn</a>
 
             </div>
 
@@ -134,9 +155,10 @@
     <!-- ///////////////////////MY WORK////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- ///////////////////////MY WORK////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <section class="my-work flex">
+    <section id="projects" class="my-work flex">
+        <h1 class="recent">Recent Projects</h1>
+
         <div class="container flex">
-            <h1 class="recent">Recent Projects</h1>
             <!-- <div class="carousel flex"> -->
             <!-- //////REBEL CARD/////////////////////////////// -->
             <div class="card rebel-card flex">
@@ -211,7 +233,7 @@
     <!-- ///////////////////////CONTACT////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- ///////////////////////CONTACT////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <section class="contact"></section>
+    <section class="contact" id="contact"></section>
 
 
     <!-- ///////////////////////FOOTER////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -219,22 +241,22 @@
     <!-- ///////////////////////FOOTER////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <footer>
-        <nav>
-            <!-- <div class="desktop-nav"> -->
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
+        <nav class="flex">
+            <div class="container flex">
+                <ul>
+                    <li class="list-item"><a href="#home">Home</a></li>
+                    <li class="list-item"><a href="#about">About</a></li>
+                    <li class="list-item"><a href="#projects">Projects</a></li>
+                    <li class="list-item"><a href="#contact">Contact</a></li>
+                </ul>
 
-            <div class="link-logos flex">
-                <a href="https://github.com/Scott-Holt"><img class="gh-logo"
-                        src="./images/GitHub-Mark-Light-120px-plus.png" /></a>
-                <a href="https://www.linkedin.com/in/scott-holt-56a10317b/"><img class="linkedin-logo"
-                        src="./images/In-White-40@2x.png" /></a>
+                <div class="link-logos flex">
+                    <a href="https://github.com/Scott-Holt"><img class="gh-logo"
+                            src="./images/GitHub-Mark-Light-120px-plus.png" /></a>
+                    <a href="https://www.linkedin.com/in/scott-holt-56a10317b/"><img class="linkedin-logo"
+                            src="./images/In-White-40@2x.png" /></a>
+                </div>
             </div>
-            <!-- </div> -->
         </nav>
 
     </footer>

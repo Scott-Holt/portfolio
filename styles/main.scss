@@ -15,8 +15,10 @@ $dark-gray:#585858;
 
 $large-phone:400px;
 $desktop:768px;
+$laptop:1024px;
 $med-desktop:1300px;
-$large-desktop:1700px;
+$large:1500px;
+$xtra-large:1700px;
 
 @mixin large-phone {
     @media(min-width:#{$large-phone}){
@@ -30,14 +32,28 @@ $large-desktop:1700px;
     }
 }
 
+@mixin laptop {
+    @media(min-width:#{$laptop}){
+        @content;
+    }
+}
+
+
+
 @mixin med-desktop(){
     @media(min-width:#{$med-desktop}){
         @content;
     }
 }
 
-@mixin large-desktop(){
-    @media(min-width:#{$large-desktop}){
+@mixin large {
+    @media(min-width:#{$large}){
+        @content;
+    }
+}
+
+@mixin xtra-large(){
+    @media(min-width:#{$xtra-large}){
         @content;
     }
 }
@@ -66,12 +82,14 @@ body{
     font-family: $paragraph-font;
     color:white;
     background-color:white;
+    max-width:2300px;
 
 }
 
 h1{
-    font-family:$headers-font;
+    font-family:$header-font;
     color:$main;
+    text-transform: to-upper-case;
 }
 
 .button{
@@ -94,6 +112,10 @@ h1{
     @include desktop(){
         width: 60%;
     }
+
+    @include laptop(){
+        width: 40%;
+    }
 }
 
 
@@ -101,6 +123,22 @@ h1{
 
 .container{
     width:90%;
+
+    @include desktop(){
+        width:80%;
+    }
+
+    @include laptop(){
+        width:90%;
+    }
+
+    @include large(){
+        width: 75%;
+    }
+
+    @include xtra-large(){
+        width:60%;
+    }
 
 }
 
@@ -126,7 +164,25 @@ section{
     background-repeat: no-repeat; 
 }
 
+a{
+    text-decoration: none;
+    color: white;
 
+    &:hover{
+        color:$main;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        -webkit-transition: ease-in-out .3s;
+        -moz-transition: ease-in-out .3s;
+        -ms-transition: ease-in-out .3s;
+        -o-transition: ease-in-out .3s;
+
+        &:active{
+            color:$main;
+        }
+    }
+
+}
 
 //////////HEADER////////////////
 
@@ -219,6 +275,7 @@ nav{
     display:none;
 
     @include desktop(){
+        display:block;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -234,21 +291,6 @@ nav{
             width: 40%;
             justify-content: space-around;
 
-            li{
-                &:hover{
-                    color:$main;
-                    cursor: pointer;
-                    transition: ease-in-out .3s;
-                    -webkit-transition: ease-in-out .3s;
-                    -moz-transition: ease-in-out .3s;
-                    -ms-transition: ease-in-out .3s;
-                    -o-transition: ease-in-out .3s;
-
-                    &:active{
-                        color:$main;
-                    }
-                }
-            }
         }
 
         .link-logos{
@@ -279,8 +321,66 @@ nav{
 
 
 .phone-nav{
-    @include desktop(){
-        display:none;
+    position: absolute;
+    top: 0px;
+    left: -70%;
+    width: 70%;
+    height: 100vh;
+    background-color:$main;
+    flex-direction: column;
+    transition:ease-in-out .3s;
+    -webkit-transition:ease-in-out .3s;
+    -moz-transition:ease-in-out .3s;
+    -ms-transition:ease-in-out .3s;
+    -o-transition:ease-in-out .3s;
+
+    span{
+        position: absolute;
+        top: 10px;
+        right: 32px;
+        font-size: 4em;
+    }
+
+    ul{
+        list-style-type: none;
+        width: 100%;
+        // height: 68%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        font-size: 3em;
+
+        li{
+            width: 100%;
+            border-top:1px solid;
+            border-bottom:1px solid;
+            display: flex;
+            justify-content: center;
+            padding: .5em;
+            background-color: #44424282;
+
+            &:hover{
+                background-color:$dark-gray;
+                transition:ease-in-out .3s;
+                -webkit-transition:ease-in-out .3s;
+                -moz-transition:ease-in-out .3s;
+                -ms-transition:ease-in-out .3s;
+                -o-transition:ease-in-out .3s;
+            }
+        }
+    }
+
+    .link-logos{
+        margin-top: 3em;
+        width: 65%;
+        // border: 1px solid;
+        justify-content: space-around;
+
+        .gh-logo{
+            height: 97px;
+        }
     }
 }
 
@@ -295,7 +395,7 @@ nav{
 
         .text, .technologies{
             flex-direction: column;
-            padding: 2em;
+            padding: 4em;
             background: $background;
             margin-bottom:1em;
 
@@ -303,6 +403,17 @@ nav{
 
         .text{
             align-self:stretch;
+
+            p{
+
+                @include laptop(){
+                    width:75%;
+                }
+
+                @include med-desktop(){
+                    width:50%;
+                }
+            }
 
         }
 
@@ -313,6 +424,7 @@ nav{
 
             h1{
                 text-align: center;
+                margin-bottom:2em;
             }
 
             .icons{
@@ -348,25 +460,38 @@ nav{
     flex-direction: column;
     background-color:#f3f3f3;
 
+    .recent{
+        font-size:2.4em;
+        margin-top: 2em;
+    }
+
     
     .container{
         flex-direction: column;
-        
-        .recent{
-            font-size:2.4em;
+
+        @include laptop(){
+            flex-wrap: wrap;
+            flex-direction: row;
+
         }
 
         .card{
             flex-direction: column;
-            box-shadow: 1px 2px 6px #00000052;
+            // box-shadow: 1px 2px 6px #00000052;
             border-radius: 10px;
             margin-bottom:3em;
-            width:100%;            
+            width:100%;   
+            
+            @include laptop(){
+                width: 46%;
+                margin:1em;
+            }
 
             .card-top{
                 height: 400px;
                 width: 100%;
             }
+
 
             .card-bottom{
                 flex-direction: column;
@@ -379,6 +504,7 @@ nav{
 
                 .container{
                     margin: 1em 0em;
+                    height: 100%;
 
                     h1{
                         margin:1em 0em 0em 0em;
@@ -392,9 +518,20 @@ nav{
                         text-align: center;
                     }
 
+                    .code{
+
+                        @include laptop(){
+                         background-color:$dark-gray;
+                        }
+                    }
+
                     .website{
                        @include desktop(){
                         margin-top: 2em;
+                       }
+
+                       @include laptop(){
+                           margin-top:0em;
                        }
                     }
                 }
@@ -421,7 +558,15 @@ nav{
 }
 
 
+// .to-do-card{
+//     .container{
+//         flex-direction:column;
 
+//         .button{
+//             flex-direction: row;
+//         }
+//     }
+// }
 
 
 /////////FOOTER///////////////////////////////////////////// 
@@ -433,6 +578,7 @@ footer{
 
     nav{
         display: block;
+    
 
         @include desktop(){
             justify-content: center;
@@ -440,22 +586,38 @@ footer{
             display: flex;
         }
 
-        .link-logos{
-            display:none;
+        .container{
+            // border:1px solid white;
+            padding: 2em;
 
             @include desktop(){
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
+                padding:1em 0em;
             }
-            
-        }
 
-        ul{
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            padding: 2em;
+
+            .link-logos{
+                display:none;
+
+                @include desktop(){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 20%;
+                }
+                
+            }
+
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+
+                @include desktop(){
+                    width: 55%;
+                }
+            }
         }
     }
 }
