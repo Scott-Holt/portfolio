@@ -136,6 +136,9 @@ header {
         header .overlay .container .header-content .fa {
           font-size: 2em;
           margin-bottom: 0.5em; }
+          @media (max-height: 557px) {
+            header .overlay .container .header-content .fa {
+              display: none; } }
           header .overlay .container .header-content .fa:hover {
             cursor: pointer; }
 
@@ -204,7 +207,6 @@ nav {
     flex-direction: column;
     /* justify-content: space-around; */
     font-size: 2em;
-    margin-top: 3em;
     /* height: 44%; */ }
     @media (max-height: 363px) {
       .phone-nav ul {
