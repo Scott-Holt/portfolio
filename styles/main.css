@@ -338,6 +338,11 @@ nav {
       .my-work .container .card .xenon-site {
         background-image: url("../images/xenon.png"); }
 
+.resume {
+  background-color: #616161; }
+  .resume .container img {
+    width: 50%; }
+
 footer {
   display: block;
   background: black;
