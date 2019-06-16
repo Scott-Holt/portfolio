@@ -278,6 +278,22 @@ header{
                         @include desktop(){
                             margin-left: 2em;
                         }
+
+                        .sub-header{
+                            margin-left: 1em;
+
+                            span{
+                                color:$main;
+    
+                            }
+                        }
+
+
+                        .close-bracket{
+                            color:$main;
+                            font-size:2em;
+                            font-family: $header-font;
+                        }
                     }
                 }
 
