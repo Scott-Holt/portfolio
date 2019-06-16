@@ -158,6 +158,14 @@ nav {
         display: flex;
         width: 40%;
         justify-content: space-around; }
+        nav ul:hover {
+          color: #4495cef2;
+          cursor: pointer;
+          transition: ease-in-out .3s;
+          -webkit-transition: ease-in-out .3s;
+          -moz-transition: ease-in-out .3s;
+          -ms-transition: ease-in-out .3s;
+          -o-transition: ease-in-out .3s; }
       nav .link-logos {
         width: 16%;
         justify-content: space-around; }
@@ -241,6 +249,8 @@ nav {
 
 .about-me {
   color: gray; }
+  .about-me a:hover {
+    color: #585858; }
   .about-me .container {
     flex-direction: column; }
     .about-me .container .text, .about-me .container .technologies {
@@ -323,6 +333,8 @@ nav {
           @media (min-width: 1024px) {
             .my-work .container .card .card-bottom .container .code {
               background-color: #585858; } }
+          .my-work .container .card .card-bottom .container .website:hover {
+            color: #585858; }
           @media (min-width: 768px) {
             .my-work .container .card .card-bottom .container .website {
               margin-top: 2em; } }
