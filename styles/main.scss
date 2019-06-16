@@ -641,8 +641,26 @@ nav{
 .resume{
     background-color:#616161;
     .container{
-        img{
+        flex-direction: column;
+
+        h1{
+            margin-bottom:0em;
+            font-size: 2.2em;
+        }
+
+        span{
+            margin-bottom:1em;
+        }
+
+        a{
             width: 50%;
+            img{
+                width: 100%;
+
+                &:hover{
+                    box-shadow:0px 0px 16px 0px $main;
+                }
+            }
         }
 
     }
