@@ -280,8 +280,11 @@ header{
                         }
 
                         h1{
+                            color:#abe031;
+
                             .open-bracket{
                                 display: none;
+                                color:white;
 
                                 @include desktop(){
                                     display: inline;
@@ -289,30 +292,46 @@ header{
                             }
                         }
 
-                        .sub-header{
+                        .style-properties{
+                            // border: 1px solid;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            margin-left:2em;
+
+                        .property{
+                            // color:#7bc9fff2;
+                            color:white;
 
                             @include desktop(){
-                                margin-left: 1em;
+                                // margin-left: 1em;
                             }
 
-                            span{
+                            .colon, .semi-colon{
                                 display:none;
+                                color:purple;
 
                                 @include desktop(){
                                     display: inline;
                                 }
     
                             }
+
+                            .value{
+                                color:purple;
+                            }
+
                         }
+                    }
 
 
                         .close-bracket{
-
                             display:none;
 
                             @include desktop(){
+                                color:white;
                                 display: inline;
-                                color:$main;
+                                // color:$main;
                                 font-size:2em;
                                 font-family: $header-font;
                             }
@@ -526,9 +545,18 @@ nav{
 
         .text{
             align-self:stretch;
+            
 
             p{
+                text-align: center;
+                font-size: .7em;
 
+                @include large-phone(){
+                    font-size:1em;
+                }
+                @include desktop(){
+                    text-align: left;
+                }
                 @include laptop(){
                     width:75%;
                 }
