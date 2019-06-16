@@ -134,7 +134,7 @@ header {
             header .overlay .container .header-content .col1 .header-text {
               margin-left: 2em; } }
           header .overlay .container .header-content .col1 .header-text h1 {
-            color: #abe031; }
+            color: #4495cef2; }
             header .overlay .container .header-content .col1 .header-text h1 .open-bracket {
               display: none;
               color: white; }
@@ -147,15 +147,15 @@ header {
             align-items: flex-start;
             margin-left: 2em; }
             header .overlay .container .header-content .col1 .header-text .style-properties .property {
-              color: white; }
+              color: #b2ff1d; }
               header .overlay .container .header-content .col1 .header-text .style-properties .property .colon, header .overlay .container .header-content .col1 .header-text .style-properties .property .semi-colon {
                 display: none;
-                color: purple; }
+                color: white; }
                 @media (min-width: 768px) {
                   header .overlay .container .header-content .col1 .header-text .style-properties .property .colon, header .overlay .container .header-content .col1 .header-text .style-properties .property .semi-colon {
                     display: inline; } }
               header .overlay .container .header-content .col1 .header-text .style-properties .property .value {
-                color: purple; }
+                color: abe031; }
           header .overlay .container .header-content .col1 .header-text .close-bracket {
             display: none; }
             @media (min-width: 768px) {

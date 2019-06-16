@@ -280,7 +280,7 @@ header{
                         }
 
                         h1{
-                            color:#abe031;
+                            color:$main;
 
                             .open-bracket{
                                 display: none;
@@ -301,7 +301,7 @@ header{
 
                         .property{
                             // color:#7bc9fff2;
-                            color:white;
+                            color:#b2ff1d;
 
                             @include desktop(){
                                 // margin-left: 1em;
@@ -309,7 +309,7 @@ header{
 
                             .colon, .semi-colon{
                                 display:none;
-                                color:purple;
+                                color:white;
 
                                 @include desktop(){
                                     display: inline;
@@ -318,7 +318,7 @@ header{
                             }
 
                             .value{
-                                color:purple;
+                                color:abe031;
                             }
 
                         }
