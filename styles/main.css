@@ -133,14 +133,27 @@ header {
           @media (min-width: 768px) {
             header .overlay .container .header-content .col1 .header-text {
               margin-left: 2em; } }
-          header .overlay .container .header-content .col1 .header-text .sub-header {
-            margin-left: 1em; }
-            header .overlay .container .header-content .col1 .header-text .sub-header span {
-              color: #4495cef2; }
+          header .overlay .container .header-content .col1 .header-text h1 .open-bracket {
+            display: none; }
+            @media (min-width: 768px) {
+              header .overlay .container .header-content .col1 .header-text h1 .open-bracket {
+                display: inline; } }
+          @media (min-width: 768px) {
+            header .overlay .container .header-content .col1 .header-text .sub-header {
+              margin-left: 1em; } }
+          header .overlay .container .header-content .col1 .header-text .sub-header span {
+            display: none; }
+            @media (min-width: 768px) {
+              header .overlay .container .header-content .col1 .header-text .sub-header span {
+                display: inline; } }
           header .overlay .container .header-content .col1 .header-text .close-bracket {
-            color: #4495cef2;
-            font-size: 2em;
-            font-family: "Nunito", sans-serif; }
+            display: none; }
+            @media (min-width: 768px) {
+              header .overlay .container .header-content .col1 .header-text .close-bracket {
+                display: inline;
+                color: #4495cef2;
+                font-size: 2em;
+                font-family: "Nunito", sans-serif; } }
         header .overlay .container .header-content .fa {
           font-size: 2em;
           margin-bottom: 0.5em; }

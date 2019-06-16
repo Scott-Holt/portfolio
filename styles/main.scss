@@ -279,20 +279,43 @@ header{
                             margin-left: 2em;
                         }
 
+                        h1{
+                            .open-bracket{
+                                display: none;
+
+                                @include desktop(){
+                                    display: inline;
+                                }
+                            }
+                        }
+
                         .sub-header{
-                            margin-left: 1em;
+
+                            @include desktop(){
+                                margin-left: 1em;
+                            }
 
                             span{
-                                color:$main;
+                                display:none;
+
+                                @include desktop(){
+                                    display: inline;
+                                }
     
                             }
                         }
 
 
                         .close-bracket{
-                            color:$main;
-                            font-size:2em;
-                            font-family: $header-font;
+
+                            display:none;
+
+                            @include desktop(){
+                                display: inline;
+                                color:$main;
+                                font-size:2em;
+                                font-family: $header-font;
+                            }
                         }
                     }
                 }
