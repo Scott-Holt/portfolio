@@ -148,7 +148,10 @@ header {
             align-items: flex-start;
             margin-left: 2em; }
             header .overlay .container .header-content .col1 .header-text .style-properties .property {
-              color: #b2ff1d; }
+              color: white; }
+              @media (min-width: 768px) {
+                header .overlay .container .header-content .col1 .header-text .style-properties .property {
+                  color: #b2ff1d; } }
               header .overlay .container .header-content .col1 .header-text .style-properties .property .colon, header .overlay .container .header-content .col1 .header-text .style-properties .property .semi-colon {
                 display: none;
                 color: white; }

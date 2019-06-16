@@ -301,11 +301,11 @@ header{
                             margin-left:2em;
 
                         .property{
-                            // color:#7bc9fff2;
-                            color:#b2ff1d;
+                            color: white;
 
                             @include desktop(){
                                 // margin-left: 1em;
+                                color:#b2ff1d;
                             }
 
                             .colon, .semi-colon{
